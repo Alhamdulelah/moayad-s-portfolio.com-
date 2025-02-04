@@ -1,1 +1,1 @@
-a small portfolio i 've built to help get my free code camp certificate (not my real portfolio)
+A small portfolio I've built to help get my free code camp certificate in resposnsive design (not my real portfolio)
