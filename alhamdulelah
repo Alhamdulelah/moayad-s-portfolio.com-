@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>project-final</title>
+        <link rel="stylesheet" href="final.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+body {
+    background-color: #39215c; /* Dark gray text for contrast */
+    
+}
+
+#h1, #h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+#welcome-section {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Starts off-screen */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#welcome-section.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide in */
+}
+#navbar{
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+.navbartext{
+    color: white;
+    margin-left: 10%;
+}
+#some-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: xx-large;
+}
+
+.img, .img2, .img3 {
+    width: 100%;  /* Make images scale */
+    max-width: 400px; /* Limit max width */
+    border-radius: 10px;
+    height: 100%;
+    max-height: 200px;
+}
+
+
+.img-text, .img-text2, .img-text3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: larger;
+    text-align: center;  /* Align text to the center */
+    margin-top: 10px;    /* Space the text below the image */
+}
+
+#projects {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Starts off-screen */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#projects.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide in */
+}
+
+.project-tile {
+    display: flex;
+    justify-content: center;
+    gap: 2vw; /* Add space between the tiles */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    margin-top: 20px; /* Space above the project tiles */
+}
+
+.project-tile div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+    margin-top: 10px;  /* Space below the text */
+    font-size: larger;
+}
+
+.link:hover {
+    color: #f1f1f1;  /* Change color on hover */
+}
+#profile-link{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 50px auto;
+    color: #f1f1f1; 
+    font-size: larger;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Starts off-screen */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+#profile-link.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide in */
+}
+html {
+    scroll-behavior: smooth;
+  }
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px 0;
+    }
+    .navbartext {
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: larger;
+    }
+    .project-tile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .img, .img2, .img3 {
+        max-width: 100%;
+        max-height: 150px;
+    }
+    #h1, #h2, #some-projects {
+        text-align: center;
+        font-size: large;
+    }
+}
+
+
+    </head>
+    <body>
+      <header >
+        <nav id="navbar">
+<a class="navbartext" href="#welcome-section">welcome section</a>
+        <a class="navbartext" href="#projects">projects</a>
+      </nav>
+      </header>
+        <div class="container">
+            <div id="welcome-section">
+                <h1 id="h1">Welcome to my portfolio!</h1>
+                <h2 id="h2">"Welcome to my portfolio! I'm passionate about creating clean, 
+                    functional, and visually appealing web experiences.
+                    Explore my work and feel free to reach out—let’s build something great together!"</h2>    
+                <p id="some-projects">some of my projects!</p>            
+            </div>
+        </div>
+
+        <section id="projects">
+            <div class="project-tile">
+                <div class="div-1">
+                    <img class="img" src="thumbnails/Screenshot 2025-02-02 183858.png" alt="">    
+                    <p class="img-text">a survey form</p>
+                    <a class="link" href="http://127.0.0.1:5500/cat.html" target="_blank">click to visit the survey website!</a>
+                </div>
+                <div class="div-2">
+                    <img class="img2" src="thumbnails/Screenshot 2025-02-03 142816.png" alt="">
+                    <p class="img-text2">a product landing page</p>
+                    <a class="link" href="http://127.0.0.1:5500/mm.html" target="_blank">click to visit the product lading website!</a>
+                </div> 
+                <div class="div-3">
+                    <img class="img3" src="thumbnails/Screenshot 2025-02-03 164043.png" alt="">
+                    <p class="img-text3">a tribute page</p>
+                    <a class="link" href="http://127.0.0.1:5500/bismallah.html" target="_blank">click to visit the tribute website!</a>
+                </div>
+            </div>
+        </section>
+<a id="profile-link" href="https://github.com/Alhamdulelah" target="_blank">my gethub profile!</a>
+        <script>
+            window.onload = function () {
+                setTimeout(() => {
+                    document.querySelector('#welcome-section').classList.add('visible');
+                    document.querySelector('#projects').classList.add('visible');
+                    document.querySelector('#profile-link').classList.add('visible');
+                }, 500); /* 500ms delay before the transition starts */
+            };
+        </script>
+    </body>
+</html>
